@@ -35,6 +35,7 @@
 </html>
 
 <!-- MAIN (Center website) -->
+<section id="about">
 <div class="main">
 
     <h1>MYLOGO.COM</h1>
@@ -83,3 +84,4 @@
     
     <!-- END MAIN -->
     </div> 
+</section>

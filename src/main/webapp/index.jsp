@@ -4,7 +4,9 @@
 </head>
 <body style="text-align: center">
 <h1>Congratulations!</h1>
-<img src="owl.png">
+p>Sized image (in %):</p>
+<img class="two" src="owl.png" width="300" height="300">
+
 
 <h2>You have successfully launched your Instance!</h2>
 <form action="action_page.php">

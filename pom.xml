@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.deva.co.in.samples</groupId>
-    <artifactId>hello</artifactId>
+    <artifactId>myportfolio</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
-    <name>hello</name>
+    <name>deva</name>
     <url>https://github.com/devendrapejjaaii/javaprj/tree/master/src/main/webapp</url>
     <dependencies>
         <dependency>

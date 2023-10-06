@@ -1,87 +1,75 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Devendra  Portofilio Sample App: success!</title>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body style="text-align: center">
-<h1>Congratulations!</h1>
-<img class="two" src="owl.png" width="300" height="300">
+<body>
 
+<!-- Header -->
+<header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+  <img class="w3-image" src="/w3images/photographer.jpg" alt="Me" width="1500" height="600">
+  <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">JANE DOE</h1>
+    <h5 class="w3-hide-large" style="white-space:nowrap">JANE DOE</h5>
+    <h3 class="w3-hide-medium w3-hide-small">PHOTOGRAPHER</h3>
+  </div>
+  
+  <!-- Navbar (placed at the bottom of the header image) -->
+  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
+    <a href="#" class="w3-bar-item w3-button">Home</a>
+    <a href="#portfolio" class="w3-bar-item w3-button">Portfolio</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  </div>
+</header>
 
-<h2>You have successfully launched your Instance!</h2>
-<form action="action_page.php">
-    <div class="container">
-        <h1>Register</h1>
-        <p>Please fill in this form to create an account.</p>
-        <hr>
+<!-- Navbar on small screens -->
+<div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
+<div class="w3-bar w3-light-grey">
+  <a href="#" class="w3-bar-item w3-button">Home</a>
+  <a href="#portfolio" class="w3-bar-item w3-button">Portfolio</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+</div>
+</div>
+<!-- Page content -->
+<div class="w3-content w3-padding-large w3-margin-top" id="portfolio">
 
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+  <!-- Images (Portfolio) -->
+  <img src="/w3images/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
+  <img src="/w3images/ocean2.jpg" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="/w3images/falls2.jpg" alt="Falls" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="/w3images/mountainskies.jpg" alt="Skies" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="/w3images/mountains2.jpg" alt="Mountains" class="w3-image w3-margin-top" width="1000" height="500">
 
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-        <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-        <hr>
-
-        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-        <button type="submit" class="registerbtn">Register</button>
-        </div>
-
-    <div class="container signin">
-        <p>Already have an account? <a href="#">Sign in</a>.</p>
-    </div>
-</form> 
-</html>
-
-<!-- MAIN (Center website) -->
-<section id="about">
-<div class="main">
-
-    <h1>MYLOGO.COM</h1>
+  <!-- Contact -->
+  <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
+    <h3 class="w3-center">Contact</h3>
     <hr>
-    
-    <h2>PORTFOLIO</h2>
-    <p>Resize the browser window to see the responsive effect.</p>
-    
-    <!-- Portfolio Gallery Grid -->
-    <div class="row">
-        <div class="column">
-        <div class="content">
-        <img src="mountains.jpg" alt="Mountains" style="width:100%">
-        <h3>My Work</h3>
-        <p>Lorem ipsum..</p>
-        </div>
-    </div>
-    <div class="column">
-        <div class="content">
-        <img src="lights.jpg" alt="Lights" style="width:100%">
-        <h3>My Work</h3>
-        <p>Lorem ipsum..</p>
-        </div>
-    </div>
-    <div class="column">
-        <div class="content">
-        <img src="nature.jpg" alt="Nature" style="width:100%">
-        <h3>My Work</h3>
-        <p>Lorem ipsum..</p>
-        </div>
-    </div>
-    <div class="column">
-        <div class="content">
-        <img src="mountains.jpg" alt="Mountains" style="width:100%">
-        <h3>My Work</h3>
-        <p>Lorem ipsum..</p>
-        </div>
-    </div>
-    </div>
-    
-    <div class="content">
-    <img src="bear.jpg" alt="Bear" style="width:100%">
-    <h3>Some Other Work</h3>
-    <p>Lorem ipsum..</p>
-    </div>
-    
-    <!-- END MAIN -->
-    </div> 
-</section>
+    <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus.</p>
+
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" required name="Name">
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" required name="Email">
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" required name="Message">
+      </div>
+      <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+    </form><br>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+
+  </div>
+
+<!-- End page content -->
+</div>
+
+</body>
+</html>

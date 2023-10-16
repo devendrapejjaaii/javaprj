@@ -7,6 +7,8 @@ Pre-Requisites:
 - Pre-requisites to install Jenkins
   - java-11
 
+  ```bash sudo apt install openjdk-11-jdk -y```
+
 1. Once VM is created in azure run below command to install jenkins
 
 ```bash
@@ -26,7 +28,11 @@ sudo apt-get install jenkins
 cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
-4.Next we need to configure jenkins GUI by creating 1 user with password at GUI , which we will use to login and administer jenkins
+4.We need to install maven in jenkins server in order to package/compile java code.
+
+```bash sudo apt install maven -y```
+
+5.Next we need to configure jenkins GUI by creating 1 user with password at GUI , which we will use to login and administer jenkins
 
 ## Next we need to configure Jenkins to run Pipeline
 
@@ -41,8 +47,18 @@ Plugins to be configured in jenkins to run Pipeline:
 - Github
 - Maven
 - Deploy to Container
+- Publish over ssh
 
 Credentials to be Updated in Jenkins Console:
 
 - Github
 - Tomcat user
+
+Integration with server
+
+- Ansible
+- Docker
+
+install ansible in jenkins inorder to run ansible command from jenkins dashboard
+sudo apt-get update
+sudo apt-get install ansible

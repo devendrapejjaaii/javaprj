@@ -73,19 +73,41 @@ COPY ./*.war /usr/local/tomcat/webapps
 ```yaml
 ---
   - name: Create docker images
-    hosts: all
+    hosts: ansible
     become: yes
     tasks:
       - name: Create docker image using docker command
-        command: docker build -t myope:v1 .
+        command: docker build -t myope:latest .
         args:
-          chdir: /opt/docker
-      - name: Create a tag for our image
-        command: docker tag myregapp:latest devendrapejjaaii/myregapp:latest  
-      - name: push image to docker hub 
-        command: docker push devendrapejjaaii/myregapp:latest
-
+          chdir: /opt/javaprj
+      - name: login to docker hub
+        command: docker login -u devendrapejjaaii@gmail.com -p "Pejjaye@832309"
+      - name: create tages for our image
+        command: docker tag myope:latest devendrapejjai/javaproj:latest
+      - name: Push the image to dockerhub
+        command: docker push devendrapejjai/javaproj:latest
+      
 ```
+
+docker build -t myope:latest .
+  346  docker images
+  347  docker tag myope:latest devendrapejjai/javaproj:latest
+  348  docker images
+  349  docker push devendrapejjai/javaproj:latest
+
+sudo chown -R devopsuser:devopsuser /var/run/docker.sock
+Pushing images
+
+You can push a new image to this repository using the CLI:
+
+docker tag local-image:tagname new-repo:tagname
+docker push new-repo:tagname
+
+Make sure to replace tagname with your desired image repository tag.
+ansible-playbook /opt/javaprj/containr.yaml --limit ansible;
+
+ansible-playbook  /opt/javaprj/simple-ansible.yaml;
+
 
 - Create a host inventory file where this our images should be build
 
@@ -125,13 +147,13 @@ docker tag <imageid> devendrapejjaaii/myregapp:latest
    hosts: dockerhost
    tasks:
      - name: stop existing container 
-       command: docker stop myapp:latest
+       command: docker stop mycont-c1:latest
      - name: remove the container
-       command:  docker rm myapp:latest
+       command:  docker rm mycont-c1:latest
      - name: remove the image
-       command: docker rmi devendrapejjaaii/myregapp:latest
-     - name: create a container using docker command
-       command: docker run -d --name myapp:latest -p 8081:8080 devendrapejjaaii/myregapp:latest
+       command: docker rmi devendrapejjai/myope:latest
+     - name: Create a conatiner
+      command: docker run -d --name mycont-c1 -p 8081:8080 myope:latest
 
 ```
 
